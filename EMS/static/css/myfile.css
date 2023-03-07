@@ -1,0 +1,22 @@
+h3
+{
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+.homecenter
+{
+    margin-top: 200px;
+}
+.homeborder
+{
+    border-style: solid;
+    border-color: aqua;
+    width: 700px;
+    height: 120px;
+    
+}
+.card
+{
+    width: 38rem;
+    margin-top: 40px;
+}

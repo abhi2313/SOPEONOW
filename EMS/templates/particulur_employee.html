@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/myfile.css' %}">
+
+<center>
+    <div class="card">
+        <div class="card-header">
+
+            <b>Employee_name : {{employee.name}}</b>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item "><b>Date_of_Birth : {{employee.date_of_birth}}</b></li>
+            <li class="list-group-item "><b>Date_of_Joining : {{employee.date_of_joining}}</b></li>
+            <li class="list-group-item "><b>Department : {{employee.department}}</b></li>
+            <li class="list-group-item "><b>Post : {{employee.post}}</b></li>
+            <li class="list-group-item "><b>Address : {{employee.address}}</b></li>
+            <li class="list-group-item "><b>Country : {{employee.country}}</b></li>
+            <li class="list-group-item "><b>State : {{employee.state}}</b></li>
+            <li class="list-group-item "><b>City : {{employee.city}}</b></li>
+            <li class="list-group-item "><b>Zipcode: {{employee.zipcode}}</b></li>
+            <li class="list-group-item "><b>Is_Active :
+                    {% if employee.active %}
+                    Yes
+                    {% else %}
+                    No
+                    {% endif %}
+
+                </b></li>
+            <li class="list-group-item "><b>Leave_Count : {{employee.leave_count}}</b></li>
+            <li class="list-group-item "><b>On_leave :
+                    {% if employee.on_leave %}
+                    Yes
+                    {% else %}
+                    No
+                    {% endif %}
+                </b></li>
+            <li class="list-group-item "><b><a href="{% url 'update_employee' employee.id %}">Edit Employee</a></b>
+            </li>
+
+        </ul>
+    </div>
+</center>
+{% endblock %}
